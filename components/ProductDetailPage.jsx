@@ -1,247 +1,261 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import Tabs from '@mui/joy/Tabs';
+import TabList from '@mui/joy/TabList';
+import Tab from '@mui/joy/Tab';
+import TabPanel from '@mui/joy/TabPanel';
 
 
 export default function PDP() {
     return (
         <>
-        <div className="images">
-            <img className="bg" src="https://bookatrekking.com/data/images/2018/06/Panorama-Kilimanjaro__header.jpg"/>
-            <div className="tops">
-                {/* <img src="https://bookatrekking.com/data/images/2018/06/Panorama-Kilimanjaro__header.jpg" alt="">  */}
-                <h3 className="Green">
-                    <a href="#">
-                        <span>
-                            {/* <FontAwesomeIcon icon={faEnvelope} /> */}
-                        </span>                 
-                        contact@bookatrekking.com
-                    </a>
-                </h3>
-                <p className="black">
-                    <a href="">See our <strong> 270 </strong> 
-                    reviews on                   
-                    <span className="green">
-                        {/* <FontAwesomeIcon icon={faStar} />  */}
-                    </span>
-                    <strong> Trustpilot</strong>
-                    </a>     
-                </p>
-        
-                <p className="black">Call us on :  
-                    <span className="green">
-                        {/* <FontAwesomeIcon icon={faPhone} /> */}
-                    </span>
-                    +31 850161354
-                </p>
-            </div>
-            <div className="navi">
-                <h2 className="white">                
-                    <a href="#">
-                    <img className="logo" src="https://bookatrekking.com/app/static/img/logo-green-white.svg" class="logo-white" alt="Bookatrekking.com"></img>
-                    </a>
-                </h2>
-                <ul className="right">
-                    <li><a class="hover-green" href="#">Home</a></li>
-                    <li><a class="hover-green" href="#">Destination</a></li>
-                    <li><a class="hover-green" href="#">Trecking type</a></li>
-                    <li><a class="hover-green" href="#">Blog</a></li>
-                    <li><a class="hover-green" href="#">Contact Us $ </a></li>
-                    <li class="white"> <span class="white">
-                            {/* <FontAwesomeIcon icon={faShoppingBag} /> */}
-                        </span>(0) </li>
-                </ul>
-        
-        </div>
+            <div className="images">
+                <img className="bg" src="https://bookatrekking.com/data/images/2018/06/Panorama-Kilimanjaro__header.jpg" />
 
-        </div>   
-        <div className="white-portion">
-            <div className="flex-row">
-                <div className="left-white">
-                    <p>
-                        <a className="hover-green">
-                            Kilimanjaro  
-                        </a> 
-                        <a className="hover-green">
-                        Machame Route 
+
+
+            </div>
+
+            <div className="white-portion">
+                <div className="flex-row">
+
+                    <div className="left-white">
+                        <p>
+                            <a className="hover-green">
+                                Kilimanjaro
+                            </a>
+                            <a className="hover-green">
+                                Machame Route
+                            </a>
+                        </p>
+                        <h1>Machame Route</h1>
+                        <h2>Enosa Expeditions - 7 days</h2>
+                        <div className="grey">
+                            <h2>Regular days with</h2>
+                            <ul className="icon-text">
+                                <li> 15 - 20 km per day</li>
+                                <li>500 - 1000m ascent per day</li>
+                                <li> T3 Trails</li>
+                            </ul>
+
+                        </div>
+
+
+                        <Tabs aria-label="Basic tabs" defaultValue={0} sx={{ borderRadius: 'lg' }}>
+                            <div className="options">
+                                <ul className="big">
+                                    <TabList>
+                                        <Tab><a href="#">Overview</a></Tab>
+                                        <Tab><a href="#">Itinerary</a></Tab>
+                                        <Tab><a href="#">Included</a></Tab>
+                                        <Tab><a href="#">Accomodaion</a></Tab>
+                                        <Tab><a href="#">FAQ</a></Tab>
+                                        <Tab><a href="#">Training</a></Tab>
+                                        <Tab><a href="#">Paking List</a></Tab>
+                                        <Tab><a href="#">Enosa Expeditions</a></Tab>
+                                        <Tab><a href="#">Safety</a></Tab>
+                                        <Tab><a href="#">How to Book</a></Tab>
+
+                                    </TabList>
+                                </ul>
+
+                            </div>
+                            <TabPanel value={0} className="details">
+                                <p>Trek through France, Italy, and Switzerland
+                                    Spend your nights in mountain huts
+                                    Complete the full Tour du Mont Blanc
+
+                                    This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
+
+                                    Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure.
+                                </p>
+                            </TabPanel>
+
+                            <TabPanel value={1} className="details">
+                                <p>rance, Italy, and Switzerland
+                                    Spend your nights in mountain huts
+                                    Complete the full Tour du Mont Blanc
+
+                                    This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
+
+                                    Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure.
+                                </p>
+                            </TabPanel>
+
+                            <TabPanel value={2} className="details">
+                                <p>Trplete the full Tour du Mont Blanc
+
+                                    This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
+
+                                    Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure.
+                                </p>
+                            </TabPanel>
+
+                            <TabPanel value={3} className="details">
+                                <p>Trplete the full Tour du Mont Blanc
+
+                                    This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
+
+                                    Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure.
+                                </p>
+                            </TabPanel>
+
+                            <TabPanel value={4} className="details">
+                                <p>Trplete the full Tour du Mont Blanc
+
+                                    This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
+
+                                    Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure.
+                                </p>
+                            </TabPanel>
+                        </Tabs>
+
+
+
+
+
+
+                        <div className="gallery">
+                            <h3>Gallery</h3>
+                            <img className="small-imgs" src="https://bookatrekking.com/data/images/2022/09/peaks-of-the-balkans-2__product.jpg" />
+                        </div>
+
+
+                    </div>
+                    <div classNAme="white-right">
+                        <div className="card-white">
+                            <div className="align-center">
+                                <p>From</p>
+                                <div className="flex-row" >
+                                    <p>USD $</p>
+                                    <h1 className="green">1564</h1>
+
+                                </div>
+                                <p>per person</p>
+
+                            </div>
+                            <p>See Group Discount</p>
+                            <div className="input-div">
+                                <input type="text" name="data" value="05-05-2023" />
+
+                            </div>
+                            <div className="input-div">
+                                <input name="persons" type="number" min="1" max="100" value="2" />
+
+                            </div>
+                            <button className="button">Book Now</button>
+                        </div>
+                        <a href="">See our <strong> 270 </strong>
+                            reviews on
+                            <span className="green">
+                                {/* <FontAwesomeIcon icon={faStar} />  */}
+                            </span>
+                            <strong> Trustpilot</strong>
                         </a>
-                    </p>
-                    <h1>Machame Route</h1>
-                    <h2>Enosa Expeditions - 7 days</h2>
-                    <div className="grey">
-                        <h2>Regular days with</h2>
-                        <ul className="icon-text">
-                            <li> 15 - 20 km per day</li>
-                            <li>500 - 1000m ascent per day</li>
-                            <li> T3 Trails</li>
-                        </ul>
-            
+
                     </div>
-                    <div className="options">
-                        <ul className="big">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Itinerary</a></li>
-                            <li><a href="#">Included</a></li>
-                            <li><a href="#">Accomodaion</a></li>
+                </div>
+                <div className="align-center">
+                    <h2>These treks you might like</h2>
+                    <div className="picture-cards">
+                        <div className="cards">
+                            <div className="images-container">
+                                <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg" />
+                            </div>
+                            <div className="info-container">
+                                <h3>Fast Track W-Treks</h3>
+                                <p>
+                                    This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
+                                </p>
+                                <div className="info-clear">
+                                    <p className="clear">Patagonia </p>
+                                    <p className="clear"> 3 Days</p>
+
+                                </div>
+                                <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png" />
+                            </div>
+                        </div>
+                        <div className="cards">
+                            <div className="images-container">
+                                <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg" />
+                            </div>
+                            <div className="info-container">
+                                <h3>Fast Track W-Treks</h3>
+                                <p>
+                                    This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
+                                </p>
+                                <div className="info-clear">
+                                    <p className="clear">Patagonia </p>
+                                    <p className="clear"> 3 Days</p>
+
+                                </div>
+                                <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png" />
+                            </div>
+                        </div>
+                        <div className="cards">
+                            <div className="images-container">
+                                <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg" />
+                            </div>
+                            <div className="info-container">
+                                <h3>Fast Track W-Treks</h3>
+                                <p>
+                                    This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
+                                </p>
+                                <div className="info-clear">
+                                    <p className="clear">Patagonia </p>
+                                    <p className="clear"> 3 Days</p>
+
+                                </div>
+                                <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div className="footer-white">
+                <div className="flex-row">
+                    <div className="footer-items flex-column">
+                        <h2>Destinations</h2>
+                        <ul className="places">
+                            <li><a href="#">Gilgit</a></li>
+                            <li><a href="#">Skardu</a></li>
+                            <li><a href="#">Shigar</a></li>
+                            <li><a href="#">Hunzza</a></li>
+                            <li><a href="#">Khapulu</a></li>
+                            <li><a href="#">Kharmang</a></li>
+                        </ul>
+
+                    </div>
+                    <div className="footer-items flex-column">
+                        <h2>About us</h2>
+                        <p>
+                            At Bookatrekking.com you'll find the treks that will make your life unforgettable. Whether you want to discover the Inca Trail or climb the Kilimanjaro, Bookatrekking.com offers a wide and varied range of services. Here, no false promises are made, prices are transparent and every booking is confirmed immediately. Find, compare, book and trek.
+                        </p>
+                        <ul className="terms">
+                            <li><a href="#">Privacy policy</a></li>
                             <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Training</a></li>
-                            <li><a href="#">Paking List</a></li>
-                            <li><a href="#">Enosa Expeditions</a></li>
-                            <li><a href="#">Safety</a></li>
-                            <li><a href="#">How to Book</a></li>
+                            <li><a href="#">About us </a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
                         </ul>
-            
-                    </div>
-                    <div className="details">
-                        <p>Trek through France, Italy, and Switzerland
-                            Spend your nights in mountain huts
-                            Complete the full Tour du Mont Blanc
 
-                            This hike is one of the most famous in Europe and traditionally crosses 3 countries: France, Italy, and Switzerland. The famous Tour du Mont Blanc is a 170-kilometer long circuit, which encircles the Mont Blanc massif and has 10 kilometers of ascent/descent. The trek can be completed in 7 to 11 days, depending on the route and physical condition.
-
-                            Our 10-day trek starts in Chamonix, France, and goes around the beautiful Mont Blanc massif. Along the way, you spend the nights in French, Italian and Swiss mountain huts. There you will meet other hikers and enjoy delicious local dishes. During this 10-day adventure, you'll enjoy magnificent views of the mountains, snow-capped peaks and small picturesque mountain villages. You don't have to worry about the logistics of reserving the huts. We'll take care of that for you, so all you have to do is enjoy this unforgettable adventure. 
-                       </p>
-                    </div>
-                    <div className="gallery">
-                        <h3>Gallery</h3>
-                        <img className="small-imgs" src="https://bookatrekking.com/data/images/2022/09/peaks-of-the-balkans-2__product.jpg"/>
-                    </div>
-
-
-                </div>
-                <div classNAme="white-right">
-                    <div className="card-white">
-                        <div className="align-center">
-                            <p>From</p>
-                            <div  className="flex-row" >
-                                <p>USD $</p>
-                                <h1 className="green">1564</h1>
-
-                            </div>
-                            <p>per person</p>
-
-                        </div>
-                        <p>See Group Discount</p>
-                        <div className= "input-div">
-                        <input type="text" name="data" value="05-05-2023" />
-
-                        </div>
-                        <div className= "input-div">
-                        <input name="persons" type="number" min="1" max="100" value="2"/>
-                            
-                        </div>
-                        <button className="button">Book Now</button>
-                    </div>
-                    <a href="">See our <strong> 270 </strong> 
-                    reviews on                   
-                    <span className="green">
-                        {/* <FontAwesomeIcon icon={faStar} />  */}
-                    </span>
-                    <strong> Trustpilot</strong>
-                    </a> 
-
-                </div>
-            </div>
-            <div className="align-center">
-                <h2>These treks you might like</h2>                        
-                <div className="picture-cards">
-                    <div className="cards">
-                        <div className="images-container">
-                            <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg"/>
-                        </div>
-                        <div className="info-container">
-                            <h3>Fast Track W-Treks</h3>
-                            <p>
-                                This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
-                            </p>
-                            <div className="info-clear">
-                            <p className="clear">Patagonia </p>
-                            <p className="clear"> 3 Days</p>
-
-                            </div>
-                            <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png"/>
-                        </div>
-                    </div>
-                    <div className="cards">
-                        <div className="images-container">
-                            <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg"/>
-                        </div>
-                        <div className="info-container">
-                            <h3>Fast Track W-Treks</h3>
-                            <p>
-                                This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
-                            </p>
-                            <div className="info-clear">
-                            <p className="clear">Patagonia </p>
-                            <p className="clear"> 3 Days</p>
-
-                            </div>
-                            <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png"/>
-                        </div>
-                    </div>
-                    <div className="cards">
-                        <div className="images-container">
-                            <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg"/>
-                        </div>
-                        <div className="info-container">
-                            <h3>Fast Track W-Treks</h3>
-                            <p>
-                                This is the faster way to visit the three main valleys of the famous W trail in the Torres Del Paine National park.
-                            </p>
-                            <div className="info-clear">
-                            <p className="clear">Patagonia </p>
-                            <p className="clear"> 3 Days</p>
-
-                            </div>
-                            <img className="logo-right" src="https://bookatrekking.com/data/images/2019/06/Logo-Chile-Nativo.png"/>
-                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-        <div className="footer-white">
-            <div className="flex-row">
-                <div className="footer-items flex-column">
-                    <h2>Destinations</h2>
-                    <ul className="places">
-                        <li><a href="#">Gilgit</a></li>
-                        <li><a href="#">Skardu</a></li>
-                        <li><a href="#">Shigar</a></li>
-                        <li><a href="#">Hunzza</a></li>
-                        <li><a href="#">Khapulu</a></li>
-                        <li><a href="#">Kharmang</a></li>
-                    </ul>
+            <div className="footer-green">
+                <p className="white" >@2023 Bookatrekking BV</p>
+                <p className="white">
+                    <a href="">See our <strong> 270 </strong>
+                        reviews on
+                        <span className="green">
+                            {/* <FontAwesomeIcon icon={faStar} />  */}
+                        </span>
+                        <strong> Trustpilot</strong>
+                    </a>
+                </p>
 
-                </div>
-                <div className="footer-items flex-column">
-                    <h2>About us</h2>
-                    <p>
-                        At Bookatrekking.com you'll find the treks that will make your life unforgettable. Whether you want to discover the Inca Trail or climb the Kilimanjaro, Bookatrekking.com offers a wide and varied range of services. Here, no false promises are made, prices are transparent and every booking is confirmed immediately. Find, compare, book and trek. 
-                    </p>
-                    <ul className="terms">
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">About us </a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-
-                </div>
             </div>
-
-        </div>
-        <div className="footer-green">
-            <p className="white" >@2023 Bookatrekking BV</p>
-            <p className="white">
-                <a href="">See our <strong> 270 </strong> 
-                reviews on                   
-                <span className="green">
-                    {/* <FontAwesomeIcon icon={faStar} />  */}
-                </span>
-                <strong> Trustpilot</strong>
-                </a>     
-            </p>
-
-        </div>
             <style jsx global>{`
                 body {
                     font-size: 14px;
