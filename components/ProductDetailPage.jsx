@@ -1,10 +1,14 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import Tab from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
+import { Container } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 
+
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export default function PDP() {
     return (
@@ -42,24 +46,22 @@ export default function PDP() {
 
 
                         <Tabs aria-label="Basic tabs" defaultValue={0} sx={{ borderRadius: 'lg' }}>
-                            <div className="options">
-                                <ul className="big">
-                                    <TabList>
-                                        <Tab><a href="#">Overview</a></Tab>
-                                        <Tab><a href="#">Itinerary</a></Tab>
-                                        <Tab><a href="#">Included</a></Tab>
-                                        <Tab><a href="#">Accomodaion</a></Tab>
-                                        <Tab><a href="#">FAQ</a></Tab>
-                                        <Tab><a href="#">Training</a></Tab>
-                                        <Tab><a href="#">Paking List</a></Tab>
-                                        <Tab><a href="#">Enosa Expeditions</a></Tab>
-                                        <Tab><a href="#">Safety</a></Tab>
-                                        <Tab><a href="#">How to Book</a></Tab>
 
-                                    </TabList>
-                                </ul>
+                            <TabList className="big">
+                                <Tab className="option">Overview</Tab>
+                                <Tab className="option">Itinerary</Tab>
+                                <Tab className="option">Included</Tab>
+                                <Tab className="option">Accomodaion</Tab>
+                                <Tab className="option">FAQ</Tab>
+                                <Tab className="option">Training</Tab>
+                                <Tab className="option">Paking List</Tab>
+                                <Tab className="option">Enosa Expeditions</Tab>
+                                <Tab className="option">Safety</Tab>
+                                <Tab className="option">How to Book</Tab>
 
-                            </div>
+                            </TabList>
+
+
                             <TabPanel value={0} className="details">
                                 <p>Trek through France, Italy, and Switzerland
                                     Spend your nights in mountain huts
@@ -109,12 +111,6 @@ export default function PDP() {
                                 </p>
                             </TabPanel>
                         </Tabs>
-
-
-
-
-
-
                         <div className="gallery">
                             <h3>Gallery</h3>
                             <img className="small-imgs" src="https://bookatrekking.com/data/images/2022/09/peaks-of-the-balkans-2__product.jpg" />
@@ -122,7 +118,7 @@ export default function PDP() {
 
 
                     </div>
-                    <div classNAme="white-right">
+                    <div className="white-right">
                         <div className="card-white">
                             <div className="align-center">
                                 <p>From</p>
@@ -136,7 +132,16 @@ export default function PDP() {
                             </div>
                             <p>See Group Discount</p>
                             <div className="input-div">
-                                <input type="text" name="data" value="05-05-2023" />
+                                <span className=".input">
+                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+
+                                        <DatePicker label="Select Dates" />
+
+                                    </LocalizationProvider>
+
+                                </span>
+                                {/* <input type="text" name="data" value="05-05-2023"/> */}
+
 
                             </div>
                             <div className="input-div">
@@ -145,19 +150,22 @@ export default function PDP() {
                             </div>
                             <button className="button">Book Now</button>
                         </div>
-                        <a href="">See our <strong> 270 </strong>
-                            reviews on
-                            <span className="green">
-                                {/* <FontAwesomeIcon icon={faStar} />  */}
-                            </span>
-                            <strong> Trustpilot</strong>
-                        </a>
+                        <div>
+                            <a>See our <strong> 270 </strong>
+                                reviews on
+                                <span className="green">
+                                    <StarIcon />
+                                </span>
+                                <strong> Trustpilot</strong>
+                            </a>
+
+                        </div>
 
                     </div>
                 </div>
                 <div className="align-center">
                     <h2>These treks you might like</h2>
-                    <div className="picture-cards">
+                    <div className="picture-cards flex-row">
                         <div className="cards">
                             <div className="images-container">
                                 <img src="https://bookatrekking.com/data/images/2019/12/shutterstock-161001695__product.jpg" />
@@ -212,51 +220,9 @@ export default function PDP() {
                     </div>
 
                 </div>
-            </div>
-            <div className="footer-white">
-                <div className="flex-row">
-                    <div className="footer-items flex-column">
-                        <h2>Destinations</h2>
-                        <ul className="places">
-                            <li><a href="#">Gilgit</a></li>
-                            <li><a href="#">Skardu</a></li>
-                            <li><a href="#">Shigar</a></li>
-                            <li><a href="#">Hunzza</a></li>
-                            <li><a href="#">Khapulu</a></li>
-                            <li><a href="#">Kharmang</a></li>
-                        </ul>
-
-                    </div>
-                    <div className="footer-items flex-column">
-                        <h2>About us</h2>
-                        <p>
-                            At Bookatrekking.com you'll find the treks that will make your life unforgettable. Whether you want to discover the Inca Trail or climb the Kilimanjaro, Bookatrekking.com offers a wide and varied range of services. Here, no false promises are made, prices are transparent and every booking is confirmed immediately. Find, compare, book and trek.
-                        </p>
-                        <ul className="terms">
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">About us </a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-            <div className="footer-green">
-                <p className="white" >@2023 Bookatrekking BV</p>
-                <p className="white">
-                    <a href="">See our <strong> 270 </strong>
-                        reviews on
-                        <span className="green">
-                            {/* <FontAwesomeIcon icon={faStar} />  */}
-                        </span>
-                        <strong> Trustpilot</strong>
-                    </a>
-                </p>
-
             </div>
             <style jsx global>{`
+               
                 body {
                     font-size: 14px;
                     font-weight: 400;
@@ -278,13 +244,7 @@ export default function PDP() {
                     left:0;
                     right: 0;
                 }
-                .white {
-                    display: flex;
-                    align-items: center;
-                }
-                .white .logo {
-                    width: 250px;
-                }
+                
                 .right {
                     display: flex;
                     align-items: center;
@@ -301,13 +261,13 @@ export default function PDP() {
                 }
                 
                 .images .bg {
-                height:400px;
-                filter:brightness(60%);
-                width: 100%;
-                position: relative;
-                left: 0;
-                right: 0;
-                top: 0;
+                    height:400px;
+                    filter:brightness(60%);
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    top: 0;
                 
                 
                 }
@@ -340,6 +300,7 @@ export default function PDP() {
                     position: relative;
                     top: -70px;
                     padding-left: 100px;
+                    text-align: center;
                 }
                 /*grey*/
                 .grey {
@@ -357,30 +318,54 @@ export default function PDP() {
                 /*flex- with display row*/
                 .flex-row{
                     display: flex;
-                    flex-flow: row nowrap;
                     
                 }
+                @media only screen and (max-width: 750px){
+                    * {
+                        margin: auto;
+                        text-align: center;
+                        over-flow: hidden;                     
+                    }
+                }
+                @media only screen and (max-width: 500px){
+                    .card-white{
+                        margin: 0 !important;
+                    }
+                }
+                @media only screen and (max-width: 1085px){
+                    .cards{
+                        width:150px;
+    
+                    }
+                    .gallery .small-imgs {                       
+                        width: 150px;
+                        height: 150px;
+                    }
+                    
+                    .flex-row {
+                        flex-flow: row wrap;
+                    }
+
+                }
+               
                 /*big*/
                 .big {
+                    background: white;
                     list-style: none;
                     display: flex;
                     flex-wrap: wrap;
                     
                 }
-                .big li {
+                .option {
                     margin: 10px;
                     border-radius: 10px;
-                    padding: 10px;
-                    border: 2px solid green;                 
+                    padding: 3px;
+                    border: 1px solid green;                 
                     font-size: large;                  
                 }
                 .hover-green:hover  {
                     color: green;
-                }
-                .big li a {
-                    color: black;
-                    text-decoration: none;
-                }
+                }                       
                 .details {
                     background: white;
                     border: none;
@@ -392,6 +377,11 @@ export default function PDP() {
 
                 }
                 /*card*/
+                .white-right{
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column wrap;
+                }
                 .card-white {
                     background: #fff;
                     border-radius: 24px;
@@ -403,6 +393,7 @@ export default function PDP() {
                     z-index: 2;                    
                     padding: 15px 10px 0 10px;
                 }
+                
                 .align-center {
                     display: flex;
                     flex-flow: column wrap;
@@ -416,12 +407,12 @@ export default function PDP() {
                     border:none;                                     
 
                 }
-                input{   
+                input{ 
                     outline: none;  
                     padding: 0 54px;
                     line-height: 46px;
                     height: 46px;
-                    margin: 0px 0 12px;
+                    margin: 5px 0 0 12px;
                     border-radius: 24px;
                     vertical-align: top;
                     font-weight: 600;
@@ -471,22 +462,19 @@ export default function PDP() {
                 .cards {
                     margin: 10px;
                     box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.1);
-                    width: 350px;
+                    width: 300px;
                     font-size: 16px;
                     cursor: pointer;
                     font-weight: 400;
-                    height: 550px;
                     overflow: hidden;
                     border-radius: 30px;
                     background-color: white;
                 }
                 .info-container {
-                    height: auto;
-                    // bottom: -60px;
                     position: relative;
                     top: -60px;
                     background-color: white;
-                    padding: 15px;
+                    padding:15px 15px 0 15px;
                     border-top-right-radius: 20px;
                     border-top-left-radius: 20px;
                     z-index: 1;
@@ -498,54 +486,8 @@ export default function PDP() {
                     padding-left: 15px;
 
                 }
-                .logo-right {
-                    position: relative;
-                    right: -215px;
-                }
-                .footer-white {
-                    position: relative;
-                    background-color: white;
-                    top: -90px;
-                    border-top-right-radius: 30px;
-                    border-top-left-radius: 30px;
-                    padding: 20px 40px;
-                    font-size: 16px;
-                    font-weight: 200;
-                    letter-spacing: 0.01em;
-                }
-                .footer-white .flex-row {
-                    justify-content: space-between;
-                }
-                .flex-column ul{
-                    list-style: none;
-                }
-                .flex-column li a {
-                    color: green;
-                    text-decoration: none;
-
-                }
-                .footer-items {
-                    margin: 0 80px 10px 80px;
-                    
-                }
-                .footer-green {
-                    color: white;
-                    font-size: 16px;
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: center;
-                    align-items: center;
-                    background: #007C56;
-                    left: 0;
-                    right: 0;
-                    padding: 20px;
-                    border-top-right-radius: 30px;
-                    border-top-left-radius: 30px;
-                }
-                .white a {
-                    color: white;
-                    text-decoration: none;
-                }
+               
+                
             `}
             </style>
         </>
